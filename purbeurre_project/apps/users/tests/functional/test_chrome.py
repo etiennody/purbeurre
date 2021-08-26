@@ -21,7 +21,7 @@ class RegisterSeleniumTest(unittest.TestCase):
         chrome_options.add_argument("--headless")
         chrome_options.add_argument("--no-sandbox")
         self.driver = webdriver.Chrome(
-            "/usr/local/bin/chromedriver", chrome_options=chrome_options
+            "/usr/local/bin/chromedriver/chromedriver", chrome_options=chrome_options
         )
 
     def test_valid_live_register_page(self):
@@ -71,7 +71,7 @@ class LoginSeleniumTest(unittest.TestCase):
         chrome_options.add_argument("--headless")
         chrome_options.add_argument("--no-sandbox")
         self.driver = webdriver.Chrome(
-            "/usr/local/bin/chromedriver", chrome_options=chrome_options
+            "/usr/local/bin/chromedriver/chromedriver", chrome_options=chrome_options
         )
         user = User.objects.create(
             username="BobRobert",
